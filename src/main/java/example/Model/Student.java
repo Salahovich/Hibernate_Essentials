@@ -1,19 +1,49 @@
-package example;
+package example.Model;
 
-import java.util.ArrayList;
-import java.util.List;
+import example.enums.Gender;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Range;
+
+import java.util.Set;
 import java.util.UUID;
 
+@Entity
+@Table(name= "student")
 public class Student {
-    public enum Gender {MALE, FEMALE}
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
+    @Column(name = "first_name")
+    @NotNull
+    @NotBlank
     private String firstName;
+    @Column(name = "last_name")
+    @NotNull
+    @NotEmpty
     private String lastName;
+    @Column(name = "age")
+    @Range(min = 18, max = 40)
     private int age;
+    @Column(name = "gender")
+    @Enumerated(EnumType.STRING)
     private Gender gender;
+    @Column(name = "email", unique = true)
+    @Email
     private String email;
+    @Column(name = "phone_number")
     private String phoneNumber;
+    @Column(name = "national_id")
     private String nationalId;
+    @ManyToMany(mappedBy = "students")
+    private Set<Course> courses;
+    @Transient
+    private String fullName;
     public Student(){}
 
     public Student(UUID id, String firstName, String lastName, int age, Gender gender, String email, String phoneNumber, String nationalId) {
@@ -104,7 +134,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
@@ -112,6 +142,43 @@ public class Student {
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", nationalId='" + nationalId + '\'' +
-                '}' + '\n';
+                ", courses=" + courses +
+                ", fullName='" + fullName + '\'' +
+                '}' + "\n";
+    }
+
+    @PrePersist
+    public void logNewStudentAttempt() {
+        System.out.println("Attempting to add new user with firstName: " + firstName);
+    }
+
+    @PostPersist
+    public void logNewStudentAdded() {
+        System.out.println("Added user '" + firstName + "' with ID: " + id);
+    }
+
+    @PreRemove
+    public void logStudentRemovalAttempt() {
+        System.out.println("Attempting to delete user: " + firstName);
+    }
+
+    @PostRemove
+    public void logStudentRemoval() {
+        System.out.println("Deleted user: " + firstName);
+    }
+
+    @PreUpdate
+    public void logStudentUpdateAttempt() {
+        System.out.println("Attempting to update user: " + firstName);
+    }
+
+    @PostUpdate
+    public void logStudentUpdate() {
+        System.out.println("Updated user: " + firstName);
+    }
+
+    @PostLoad
+    public void logStudentLoad() {
+        fullName = firstName + " " + lastName;
     }
 }
