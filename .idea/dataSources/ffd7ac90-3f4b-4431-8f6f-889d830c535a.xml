@@ -11,9 +11,9 @@
 4||10|c|G
 4||10|C|G
 4||10|T|G</Grants>
-      <IntrospectionStateNumber>1062</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1101</IntrospectionStateNumber>
       <ServerVersion>15.4</ServerVersion>
-      <StartupTime>1695118652</StartupTime>
+      <StartupTime>1695478373</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -268,10 +268,10 @@ false Antarctica/Davis
 false Antarctica/DumontDUrville
 false Antarctica/Macquarie
 false Antarctica/Mawson
-false Antarctica/McMurdo
+true Antarctica/McMurdo
 false Antarctica/Palmer
 false Antarctica/Rothera
-false Antarctica/South_Pole
+true Antarctica/South_Pole
 false Antarctica/Syowa
 true Antarctica/Troll
 false Antarctica/Vostok
@@ -661,8 +661,8 @@ false NOVT
 false NPT
 false NST
 false NUT
-false NZ
-false NZ-CHAT
+true NZ
+true NZ-CHAT
 true NZDT
 false NZST
 false NZT
@@ -688,9 +688,9 @@ false PWT
 true PYST
 false PYT
 false Pacific/Apia
-false Pacific/Auckland
+true Pacific/Auckland
 false Pacific/Bougainville
-false Pacific/Chatham
+true Pacific/Chatham
 false Pacific/Chuuk
 true Pacific/Easter
 false Pacific/Efate
@@ -809,7 +809,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>1062</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1101</IntrospectionStateNumber>
       <ObjectId>16886</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4175,7 +4175,31 @@ false Zulu
       <TargetTypeName>xid</TargetTypeName>
       <TargetTypeParentName>pg_catalog</TargetTypeParentName>
     </cast>
-    <extension id="257" parent="2" name="plpgsql">
+    <cast id="257" parent="2">
+      <Context>implicit</Context>
+      <Method>io</Method>
+      <ObjectId>25208</ObjectId>
+      <StateNumber>1076</StateNumber>
+      <SourceTypeId>1043</SourceTypeId>
+      <SourceTypeName>varchar</SourceTypeName>
+      <SourceTypeParentName>pg_catalog</SourceTypeParentName>
+      <TargetTypeId>16941</TargetTypeId>
+      <TargetTypeName>course_level</TargetTypeName>
+      <TargetTypeParentName>public</TargetTypeParentName>
+    </cast>
+    <cast id="258" parent="2">
+      <Context>implicit</Context>
+      <Method>io</Method>
+      <ObjectId>17016</ObjectId>
+      <StateNumber>1063</StateNumber>
+      <SourceTypeId>1043</SourceTypeId>
+      <SourceTypeName>varchar</SourceTypeName>
+      <SourceTypeParentName>pg_catalog</SourceTypeParentName>
+      <TargetTypeId>16948</TargetTypeId>
+      <TargetTypeName>gender</TargetTypeName>
+      <TargetTypeParentName>public</TargetTypeParentName>
+    </cast>
+    <extension id="259" parent="2" name="plpgsql">
       <Comment>PL/pgSQL procedural language</Comment>
       <ObjectId>13535</ObjectId>
       <StateNumber>678</StateNumber>
@@ -4187,7 +4211,7 @@ false Zulu
 13538
 13539</MemberIds>
     </extension>
-    <extension id="258" parent="2" name="uuid-ossp">
+    <extension id="260" parent="2" name="uuid-ossp">
       <Comment>generate universally unique identifiers (UUIDs)</Comment>
       <ObjectId>16929</ObjectId>
       <StateNumber>1033</StateNumber>
@@ -4205,21 +4229,21 @@ false Zulu
 16938
 16939</MemberIds>
     </extension>
-    <language id="259" parent="2" name="c">
+    <language id="261" parent="2" name="c">
       <Comment>dynamically-loaded C functions</Comment>
       <ObjectId>13</ObjectId>
       <StateNumber>1</StateNumber>
       <ValidatorName>fmgr_c_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <language id="260" parent="2" name="internal">
+    <language id="262" parent="2" name="internal">
       <Comment>built-in functions</Comment>
       <ObjectId>12</ObjectId>
       <StateNumber>1</StateNumber>
       <ValidatorName>fmgr_internal_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <language id="261" parent="2" name="plpgsql">
+    <language id="263" parent="2" name="plpgsql">
       <Comment>PL/pgSQL procedural language</Comment>
       <HandlerName>plpgsql_call_handler</HandlerName>
       <HandlerSchema>pg_catalog</HandlerSchema>
@@ -4231,7 +4255,7 @@ false Zulu
       <ValidatorName>plpgsql_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <language id="262" parent="2" name="sql">
+    <language id="264" parent="2" name="sql">
       <Comment>SQL-language functions</Comment>
       <ObjectId>14</ObjectId>
       <StateNumber>1</StateNumber>
@@ -4239,34 +4263,34 @@ false Zulu
       <ValidatorName>fmgr_sql_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <schema id="263" parent="2" name="information_schema">
+    <schema id="265" parent="2" name="information_schema">
       <ObjectId>13183</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <schema id="264" parent="2" name="pg_catalog">
+    <schema id="266" parent="2" name="pg_catalog">
       <Comment>system catalog schema</Comment>
       <ObjectId>11</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <schema id="265" parent="2" name="public">
+    <schema id="267" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1062</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-09-21.01:30:04.157</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-20.22:30:09</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>1101</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-09-25.14:15:21.320</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-25.11:15:27</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <materialized-view id="266" parent="265" name="all_courses">
+    <materialized-view id="268" parent="267" name="all_courses">
       <ObjectId>17005</ObjectId>
       <SourceTextLength>166</SourceTextLength>
       <StateNumber>1056</StateNumber>
       <OwnerName>postgres</OwnerName>
     </materialized-view>
-    <object-type id="267" parent="265" name="course_level">
+    <object-type id="269" parent="267" name="course_level">
       <Labels>BEGINNER
 INTERMEDIATE
 ADVANCED</Labels>
@@ -4276,7 +4300,7 @@ ADVANCED</Labels>
       <SubKind>enum</SubKind>
       <OwnerName>postgres</OwnerName>
     </object-type>
-    <object-type id="268" parent="265" name="gender">
+    <object-type id="270" parent="267" name="gender">
       <Labels>MALE
 FEMALE</Labels>
       <ObjectId>16948</ObjectId>
@@ -4285,7 +4309,7 @@ FEMALE</Labels>
       <SubKind>enum</SubKind>
       <OwnerName>postgres</OwnerName>
     </object-type>
-    <routine id="269" parent="265" name="uuid_generate_v1">
+    <routine id="271" parent="267" name="uuid_generate_v1">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16935</ObjectId>
@@ -4295,7 +4319,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="270" parent="265" name="uuid_generate_v1mc">
+    <routine id="272" parent="267" name="uuid_generate_v1mc">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16936</ObjectId>
@@ -4305,7 +4329,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="271" parent="265" name="uuid_generate_v3">
+    <routine id="273" parent="267" name="uuid_generate_v3">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16937</ObjectId>
@@ -4316,7 +4340,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="272" parent="265" name="uuid_generate_v4">
+    <routine id="274" parent="267" name="uuid_generate_v4">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16938</ObjectId>
@@ -4326,7 +4350,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="273" parent="265" name="uuid_generate_v5">
+    <routine id="275" parent="267" name="uuid_generate_v5">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16939</ObjectId>
@@ -4337,7 +4361,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="274" parent="265" name="uuid_nil">
+    <routine id="276" parent="267" name="uuid_nil">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16930</ObjectId>
@@ -4348,7 +4372,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="275" parent="265" name="uuid_ns_dns">
+    <routine id="277" parent="267" name="uuid_ns_dns">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16931</ObjectId>
@@ -4359,7 +4383,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="276" parent="265" name="uuid_ns_oid">
+    <routine id="278" parent="267" name="uuid_ns_oid">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16933</ObjectId>
@@ -4370,7 +4394,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="277" parent="265" name="uuid_ns_url">
+    <routine id="279" parent="267" name="uuid_ns_url">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16932</ObjectId>
@@ -4381,7 +4405,7 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="278" parent="265" name="uuid_ns_x500">
+    <routine id="280" parent="267" name="uuid_ns_x500">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>16934</ObjectId>
@@ -4392,146 +4416,152 @@ FEMALE</Labels>
       <LanguageName>c</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <table id="279" parent="265" name="course">
+    <table id="281" parent="267" name="course">
       <ObjectId>16965</ObjectId>
       <StateNumber>1033</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="280" parent="265" name="instructor">
+    <table id="282" parent="267" name="instructor">
       <ObjectId>16953</ObjectId>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1099</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="281" parent="265" name="student">
+    <table id="283" parent="267" name="instructor_details">
+      <ObjectId>25230</ObjectId>
+      <StateNumber>1100</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="284" parent="267" name="student">
       <ObjectId>16959</ObjectId>
       <StateNumber>1033</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="282" parent="265" name="student_course">
+    <table id="285" parent="267" name="student_course">
       <ObjectId>16976</ObjectId>
       <StateNumber>1033</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <view id="283" parent="265" name="all_courses2">
+    <view id="286" parent="267" name="all_courses2">
       <ObjectId>17009</ObjectId>
       <SourceTextLength>166</SourceTextLength>
       <StateNumber>1054</StateNumber>
       <OwnerName>postgres</OwnerName>
     </view>
-    <view id="284" parent="265" name="instructor_students">
+    <view id="287" parent="267" name="instructor_students">
       <ObjectId>16991</ObjectId>
       <SourceTextLength>465</SourceTextLength>
       <StateNumber>1049</StateNumber>
       <OwnerName>postgres</OwnerName>
     </view>
-    <view id="285" parent="265" name="medium_courses_for_students">
+    <view id="288" parent="267" name="medium_courses_for_students">
       <ObjectId>16996</ObjectId>
       <SourceTextLength>370</SourceTextLength>
       <StateNumber>1050</StateNumber>
       <OwnerName>postgres</OwnerName>
     </view>
-    <view id="286" parent="265" name="students_courses">
+    <view id="289" parent="267" name="students_courses">
       <ObjectId>17001</ObjectId>
       <SourceTextLength>254</SourceTextLength>
       <StateNumber>1051</StateNumber>
       <OwnerName>postgres</OwnerName>
     </view>
-    <column id="287" parent="266" name="id">
+    <column id="290" parent="268" name="id">
       <DasType>uuid|0s</DasType>
       <Position>1</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <column id="288" parent="266" name="name">
+    <column id="291" parent="268" name="name">
       <DasType>varchar(100)|0s</DasType>
       <Position>2</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <column id="289" parent="266" name="start_date">
+    <column id="292" parent="268" name="start_date">
       <DasType>timestamp|0s</DasType>
       <Position>3</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <column id="290" parent="266" name="end_date">
+    <column id="293" parent="268" name="end_date">
       <DasType>timestamp|0s</DasType>
       <Position>4</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <column id="291" parent="266" name="course_level">
+    <column id="294" parent="268" name="course_level">
       <DasType>course_level|0s</DasType>
       <Position>5</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <column id="292" parent="266" name="is_started">
+    <column id="295" parent="268" name="is_started">
       <DasType>boolean|0s</DasType>
       <Position>6</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <column id="293" parent="266" name="instructor_id">
+    <column id="296" parent="268" name="instructor_id">
       <DasType>uuid|0s</DasType>
       <Position>7</Position>
       <StateNumber>1052</StateNumber>
     </column>
-    <argument id="294" parent="269">
+    <argument id="297" parent="271">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="295" parent="270">
+    <argument id="298" parent="272">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="296" parent="271">
+    <argument id="299" parent="273">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="297" parent="271" name="namespace">
+    <argument id="300" parent="273" name="namespace">
       <DasType>uuid|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="298" parent="271" name="name">
+    <argument id="301" parent="273" name="name">
       <DasType>text|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="299" parent="272">
+    <argument id="302" parent="274">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="300" parent="273">
+    <argument id="303" parent="275">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="301" parent="273" name="namespace">
+    <argument id="304" parent="275" name="namespace">
       <DasType>uuid|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="302" parent="273" name="name">
+    <argument id="305" parent="275" name="name">
       <DasType>text|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="303" parent="274">
+    <argument id="306" parent="276">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="304" parent="275">
+    <argument id="307" parent="277">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="305" parent="276">
+    <argument id="308" parent="278">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="306" parent="277">
+    <argument id="309" parent="279">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <argument id="307" parent="278">
+    <argument id="310" parent="280">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>uuid|0s</DasType>
     </argument>
-    <column id="308" parent="279" name="id">
+    <column id="311" parent="281" name="id">
       <DasType>uuid|0s</DasType>
       <DefaultExpression>uuid_generate_v1()</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4539,49 +4569,49 @@ FEMALE</Labels>
       <StateNumber>1033</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="309" parent="279" name="name">
+    <column id="312" parent="281" name="name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="310" parent="279" name="start_date">
+    <column id="313" parent="281" name="start_date">
       <DasType>timestamp|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="311" parent="279" name="end_date">
+    <column id="314" parent="281" name="end_date">
       <DasType>timestamp|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="312" parent="279" name="course_level">
+    <column id="315" parent="281" name="course_level">
       <DasType>course_level|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>16941</TypeId>
     </column>
-    <column id="313" parent="279" name="is_started">
+    <column id="316" parent="281" name="is_started">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="314" parent="279" name="instructor_id">
+    <column id="317" parent="281" name="instructor_id">
       <DasType>uuid|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <foreign-key id="315" parent="279" name="course_instructor_id_fkey">
+    <foreign-key id="318" parent="281" name="course_instructor_id_fkey">
       <ColNames>instructor_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16971</ObjectId>
@@ -4590,7 +4620,7 @@ FEMALE</Labels>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16953</RefTableId>
     </foreign-key>
-    <index id="316" parent="279" name="course_pkey">
+    <index id="319" parent="281" name="course_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16969</ObjectId>
@@ -4599,14 +4629,14 @@ FEMALE</Labels>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="317" parent="279" name="course_pkey">
+    <key id="320" parent="281" name="course_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16970</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1033</StateNumber>
       <UnderlyingIndexId>16969</UnderlyingIndexId>
     </key>
-    <column id="318" parent="280" name="id">
+    <column id="321" parent="282" name="id">
       <DasType>uuid|0s</DasType>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4614,58 +4644,107 @@ FEMALE</Labels>
       <StateNumber>1033</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="319" parent="280" name="first_name">
+    <column id="322" parent="282" name="first_name">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="320" parent="280" name="last_name">
+    <column id="323" parent="282" name="last_name">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="321" parent="280" name="email">
+    <column id="324" parent="282" name="email">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="322" parent="280" name="phone_number">
+    <column id="325" parent="282" name="phone_number">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="323" parent="280" name="title">
+    <column id="326" parent="282" name="title">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="324" parent="280" name="instructor_pkey">
+    <column id="327" parent="282" name="details_id">
+      <DasType>uuid|0s</DasType>
+      <Position>8</Position>
+      <StateNumber>1099</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <foreign-key id="328" parent="282" name="fkdetails">
+      <ColNames>details_id</ColNames>
+      <ObjectId>25236</ObjectId>
+      <StateNumber>1100</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>25230</RefTableId>
+    </foreign-key>
+    <index id="329" parent="282" name="instructor_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16957</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1033</StateNumber>
+      <StateNumber>1086</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="325" parent="280" name="instructor_pkey">
+    <key id="330" parent="282" name="instructor_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16958</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1033</StateNumber>
       <UnderlyingIndexId>16957</UnderlyingIndexId>
     </key>
-    <column id="326" parent="281" name="id">
+    <column id="331" parent="283" name="id">
+      <DasType>uuid|0s</DasType>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1096</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="332" parent="283" name="youtube">
+      <DasType>varchar(55)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>1096</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="333" parent="283" name="hobby">
+      <DasType>varchar(55)|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>1096</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="334" parent="283" name="instructor_details_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25234</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1096</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="335" parent="283" name="instructor_details_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25235</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1096</StateNumber>
+      <UnderlyingIndexId>25234</UnderlyingIndexId>
+    </key>
+    <column id="336" parent="284" name="id">
       <DasType>uuid|0s</DasType>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4673,56 +4752,56 @@ FEMALE</Labels>
       <StateNumber>1033</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="327" parent="281" name="first_name">
+    <column id="337" parent="284" name="first_name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="328" parent="281" name="last_name">
+    <column id="338" parent="284" name="last_name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="329" parent="281" name="age">
+    <column id="339" parent="284" name="age">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="330" parent="281" name="gender">
+    <column id="340" parent="284" name="gender">
       <DasType>gender|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>16948</TypeId>
     </column>
-    <column id="331" parent="281" name="email">
+    <column id="341" parent="284" name="email">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="332" parent="281" name="phone_number">
+    <column id="342" parent="284" name="phone_number">
       <DasType>varchar(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="333" parent="281" name="national_id">
+    <column id="343" parent="284" name="national_id">
       <DasType>varchar(14)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="334" parent="281" name="student_pkey">
+    <index id="344" parent="284" name="student_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16963</ObjectId>
@@ -4731,28 +4810,28 @@ FEMALE</Labels>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="335" parent="281" name="student_pkey">
+    <key id="345" parent="284" name="student_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16964</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1033</StateNumber>
       <UnderlyingIndexId>16963</UnderlyingIndexId>
     </key>
-    <column id="336" parent="282" name="student_id">
+    <column id="346" parent="285" name="student_id">
       <DasType>uuid|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="337" parent="282" name="course_id">
+    <column id="347" parent="285" name="course_id">
       <DasType>uuid|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1033</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <foreign-key id="338" parent="282" name="student_course_student_id_fkey">
+    <foreign-key id="348" parent="285" name="student_course_student_id_fkey">
       <ColNames>student_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16981</ObjectId>
@@ -4761,7 +4840,7 @@ FEMALE</Labels>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16959</RefTableId>
     </foreign-key>
-    <foreign-key id="339" parent="282" name="student_course_course_id_fkey">
+    <foreign-key id="349" parent="285" name="student_course_course_id_fkey">
       <ColNames>course_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16986</ObjectId>
@@ -4770,7 +4849,7 @@ FEMALE</Labels>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16965</RefTableId>
     </foreign-key>
-    <index id="340" parent="282" name="student_course_pkey">
+    <index id="350" parent="285" name="student_course_pkey">
       <ColNames>student_id
 course_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -4780,169 +4859,169 @@ course_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="341" parent="282" name="student_course_pkey">
+    <key id="351" parent="285" name="student_course_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16980</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1033</StateNumber>
       <UnderlyingIndexId>16979</UnderlyingIndexId>
     </key>
-    <column id="342" parent="283" name="id">
+    <column id="352" parent="286" name="id">
       <DasType>uuid|0s</DasType>
       <Position>1</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="343" parent="283" name="name">
+    <column id="353" parent="286" name="name">
       <DasType>varchar(100)|0s</DasType>
       <Position>2</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="344" parent="283" name="start_date">
+    <column id="354" parent="286" name="start_date">
       <DasType>timestamp|0s</DasType>
       <Position>3</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="345" parent="283" name="end_date">
+    <column id="355" parent="286" name="end_date">
       <DasType>timestamp|0s</DasType>
       <Position>4</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="346" parent="283" name="course_level">
+    <column id="356" parent="286" name="course_level">
       <DasType>course_level|0s</DasType>
       <Position>5</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="347" parent="283" name="is_started">
+    <column id="357" parent="286" name="is_started">
       <DasType>boolean|0s</DasType>
       <Position>6</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="348" parent="283" name="instructor_id">
+    <column id="358" parent="286" name="instructor_id">
       <DasType>uuid|0s</DasType>
       <Position>7</Position>
       <StateNumber>1054</StateNumber>
     </column>
-    <column id="349" parent="284" name="Full Name">
+    <column id="359" parent="287" name="Full Name">
       <DasType>text|0s</DasType>
       <Position>1</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="350" parent="284" name="id">
+    <column id="360" parent="287" name="id">
       <DasType>uuid|0s</DasType>
       <Position>2</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="351" parent="284" name="first_name">
+    <column id="361" parent="287" name="first_name">
       <DasType>varchar(100)|0s</DasType>
       <Position>3</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="352" parent="284" name="last_name">
+    <column id="362" parent="287" name="last_name">
       <DasType>varchar(100)|0s</DasType>
       <Position>4</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="353" parent="284" name="age">
+    <column id="363" parent="287" name="age">
       <DasType>integer|0s</DasType>
       <Position>5</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="354" parent="284" name="gender">
+    <column id="364" parent="287" name="gender">
       <DasType>gender|0s</DasType>
       <Position>6</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="355" parent="284" name="email">
+    <column id="365" parent="287" name="email">
       <DasType>varchar(100)|0s</DasType>
       <Position>7</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="356" parent="284" name="phone_number">
+    <column id="366" parent="287" name="phone_number">
       <DasType>varchar(11)|0s</DasType>
       <Position>8</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="357" parent="284" name="national_id">
+    <column id="367" parent="287" name="national_id">
       <DasType>varchar(14)|0s</DasType>
       <Position>9</Position>
       <StateNumber>1049</StateNumber>
     </column>
-    <column id="358" parent="285" name="id">
+    <column id="368" parent="288" name="id">
       <DasType>uuid|0s</DasType>
       <Position>1</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="359" parent="285" name="first_name">
+    <column id="369" parent="288" name="first_name">
       <DasType>varchar(100)|0s</DasType>
       <Position>2</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="360" parent="285" name="last_name">
+    <column id="370" parent="288" name="last_name">
       <DasType>varchar(100)|0s</DasType>
       <Position>3</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="361" parent="285" name="age">
+    <column id="371" parent="288" name="age">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="362" parent="285" name="gender">
+    <column id="372" parent="288" name="gender">
       <DasType>gender|0s</DasType>
       <Position>5</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="363" parent="285" name="email">
+    <column id="373" parent="288" name="email">
       <DasType>varchar(100)|0s</DasType>
       <Position>6</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="364" parent="285" name="phone_number">
+    <column id="374" parent="288" name="phone_number">
       <DasType>varchar(11)|0s</DasType>
       <Position>7</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="365" parent="285" name="national_id">
+    <column id="375" parent="288" name="national_id">
       <DasType>varchar(14)|0s</DasType>
       <Position>8</Position>
       <StateNumber>1050</StateNumber>
     </column>
-    <column id="366" parent="286" name="id">
+    <column id="376" parent="289" name="id">
       <DasType>uuid|0s</DasType>
       <Position>1</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="367" parent="286" name="first_name">
+    <column id="377" parent="289" name="first_name">
       <DasType>varchar(100)|0s</DasType>
       <Position>2</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="368" parent="286" name="last_name">
+    <column id="378" parent="289" name="last_name">
       <DasType>varchar(100)|0s</DasType>
       <Position>3</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="369" parent="286" name="age">
+    <column id="379" parent="289" name="age">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="370" parent="286" name="gender">
+    <column id="380" parent="289" name="gender">
       <DasType>gender|0s</DasType>
       <Position>5</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="371" parent="286" name="email">
+    <column id="381" parent="289" name="email">
       <DasType>varchar(100)|0s</DasType>
       <Position>6</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="372" parent="286" name="phone_number">
+    <column id="382" parent="289" name="phone_number">
       <DasType>varchar(11)|0s</DasType>
       <Position>7</Position>
       <StateNumber>1051</StateNumber>
     </column>
-    <column id="373" parent="286" name="national_id">
+    <column id="383" parent="289" name="national_id">
       <DasType>varchar(14)|0s</DasType>
       <Position>8</Position>
       <StateNumber>1051</StateNumber>

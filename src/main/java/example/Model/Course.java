@@ -2,6 +2,10 @@ package example.Model;
 
 import example.enums.CourseLevel;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Past;
+import org.hibernate.annotations.CollectionId;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -25,14 +29,14 @@ public class Course {
     private CourseLevel level;
     @Column(name = "is_started")
     private boolean started;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name ="instructor_id")
     private Instructor instructor;
     @ManyToMany
     @JoinTable(
-            name = "student_course",
-            joinColumns = @JoinColumn(name="course_id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id")
+        name = "student_course",
+        joinColumns = @JoinColumn(name="course_id"),
+        inverseJoinColumns = @JoinColumn(name = "student_id")
     )
     private Set<Student> students;
     public Course(){}
@@ -111,6 +115,14 @@ public class Course {
         this.instructor = instructor;
     }
 
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
@@ -120,7 +132,7 @@ public class Course {
                 ", endDate=" + endDate +
                 ", level=" + level +
                 ", started=" + started +
-                ", instructor=" + instructor +
+                ", instructor=" + instructor+
                 '}';
     }
 }

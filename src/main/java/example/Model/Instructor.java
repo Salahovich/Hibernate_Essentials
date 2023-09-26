@@ -4,7 +4,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.validator.constraints.Length;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -30,8 +33,13 @@ public class Instructor {
     private String phoneNumber;
     @Column(name = "title")
     private String title;
-    @OneToMany(mappedBy = "instructor", cascade = CascadeType.REMOVE)
-    private Set<Course> courses;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "details_id")
+    private InstructorDetails details;
+
+    @OneToMany(mappedBy = "instructor", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+    private List<Course> courses;
     public Instructor(){}
     public Instructor(String firstName, String lastName, String email, String phoneNumber, String title) {
         this.firstName = firstName;
@@ -97,12 +105,20 @@ public class Instructor {
         this.title = title;
     }
 
-    public Set<Course> getCourses() {
+    public List<Course> getCourses() {
         return courses;
     }
 
-    public void setCourses(Set<Course> courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    public InstructorDetails getDetails() {
+        return details;
+    }
+
+    public void setDetails(InstructorDetails details) {
+        this.details = details;
     }
 
     @Override

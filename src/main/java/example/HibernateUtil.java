@@ -2,6 +2,7 @@ package example;
 
 import example.Model.Course;
 import example.Model.Instructor;
+import example.Model.InstructorDetails;
 import example.Model.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -19,6 +20,7 @@ public class HibernateUtil {
             configuration.addAnnotatedClass(Student.class);
             configuration.addAnnotatedClass(Course.class);
             configuration.addAnnotatedClass(Instructor.class);
+            configuration.addAnnotatedClass(InstructorDetails.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
             System.out.println("Hibernate Java Config serviceRegistry created");

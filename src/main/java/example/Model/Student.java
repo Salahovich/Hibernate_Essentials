@@ -23,7 +23,7 @@ public class Student {
     @NotNull
     @NotBlank
     private String firstName;
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     @NotNull
     @NotEmpty
     private String lastName;
@@ -40,7 +40,7 @@ public class Student {
     private String phoneNumber;
     @Column(name = "national_id")
     private String nationalId;
-    @ManyToMany(mappedBy = "students")
+    @ManyToMany(mappedBy = "students", cascade = CascadeType.ALL)
     private Set<Course> courses;
     @Transient
     private String fullName;
@@ -65,6 +65,14 @@ public class Student {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.nationalId = nationalId;
+    }
+
+    public Set<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
     }
 
     public UUID getId() {
